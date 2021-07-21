@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Max Johnson" />
+  <title>Massey Products for E_\infty-Ring Spectra</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Massey Products for <span class="math inline"><em>E</em><sub>∞</sub></span>-Ring Spectra</h1>
+<p class="author">Max Johnson</p>
+</header>
+<h1 class="unnumbered" id="introduction">Introduction</h1>
+<h1 class="unnumbered" id="preliminaries">Preliminaries</h1>
+<p>Denote by <span class="math inline"><em>I</em><sub>+</sub></span> the unit interval with a disjoint basepoint and by <span class="math inline"><em>I</em></span> the unit interval based at <span class="math inline">1</span>. The interval <span class="math inline"><em>I</em></span> is a cylinder objects that detects left homotopies in the category of orthogonal spectra. Such a homotopy <span class="math inline"><em>f</em> ≃ <em>g</em></span> is given by a commutative diagram:</p>
+<p><span class="math display">$$\begin{tikzcd}
+    X \\
+    &amp; {X\wedge I_+ } &amp; Y \\
+    X
+    \arrow["{i_1}"', from=1-1, to=2-2]
+    \arrow[from=2-2, to=2-3]
+    \arrow["f", from=1-1, to=2-3]
+    \arrow["{i_0}", from=3-1, to=2-2]
+    \arrow["g"', from=3-1, to=2-3]
+\end{tikzcd}$$</span></p>
+<p>Given maps <span class="math inline"><em>f</em><sub>1</sub>, <em>f</em><sub>2</sub> : <em>X</em> → <em>Z</em></span> and <span class="math inline"><em>g</em><sub>1</sub>, <em>g</em><sub>2</sub> : <em>Y</em> → <em>W</em></span> with homotopies <span class="math inline"><em>H</em><sub><em>f</em></sub></span> between <span class="math inline"><em>f</em><sub>1</sub> ≃ <em>f</em><sub>2</sub></span> and <span class="math inline"><em>H</em><sub><em>g</em></sub></span> between <span class="math inline"><em>g</em><sub>1</sub> ≃ <em>g</em><sub>2</sub></span> we get a third homotopy: <span class="math inline"><em>H</em><sub>∧</sub> : <em>X</em> ∧ <em>Y</em> → <em>Z</em> ∧ <em>W</em></span> given by: <span class="math display">$$X\wedge Y\wedge I_+ \to X\wedge Y \wedge I_+^2\xrightarrow{H_1\wedge H_2} Z\wedge W$$</span> Where the first map is induced by the infinite suspension of the diagonal on <span class="math inline"><em>I</em><sub>+</sub></span>. We will denote the smash homotopy <span class="math inline"><em>H</em><sub>∧</sub></span> by <span class="math inline"><em>H</em><sub>1</sub>∧<sup>≃</sup><em>H</em><sub>2</sub></span>.</p>
+<p>We may identify <span class="math inline"><em>I</em><sup><em>n</em></sup></span> with the unit ball in <span class="math inline">ℝ<sup><em>n</em></sup></span>. Allow <span class="math inline">∂ : <em>S</em><sup><em>n</em> − 1</sup> → <em>I</em><sup><em>n</em></sup></span> denote the inclusion of the boundary. For all of these maps and spaces, we will use the same notation for their infinite suspensions. If <span class="math inline"><em>X</em></span> is a spectrum, denote <span class="math inline"><em>X</em> ∧ <em>I</em></span> by <span class="math inline"><em>C</em><em>X</em></span>. Let <span class="math inline">𝕊</span> denote the sphere spectrum <span class="math inline"><em>Σ</em><sup>∞</sup><em>S</em><sup>0</sup></span>. Then there is always a map <span class="math inline"><em>X</em> → <em>C</em><em>X</em></span> given by: <span class="math display">$$\iota: X\xrightarrow{\cong}X\wedge\mathbb{S}\xrightarrow{\text{id}\wedge\partial}CX$$</span> We will say that a map <span class="math inline"><em>f</em> : <em>C</em><em>X</em> → <em>Y</em></span> <em>restricts</em> to a map <span class="math inline"><em>g</em> : <em>X</em> → <em>Y</em></span> if <span class="math inline"><em>f</em> ∘ <em>ι</em> = <em>g</em></span>.</p>
+<div class="lem">
+<p><strong>Lemma 1</strong>.  <em>A map of spectra <span class="math inline"><em>f</em> : <em>X</em> → <em>Y</em></span> is nullhomotopic if and only if there exists a map <span class="math inline"><em>g</em> : <em>C</em><em>X</em> → <em>Y</em></span> that restricts to <span class="math inline"><em>f</em></span>.</em></p>
+</div>
+<h1 id="construction-and-basic-properties">Construction and Basic Properties</h1>
+<h2 id="homotopical-and-homological-massey-products">Homotopical and Homological Massey Products</h2>
+<p>Spaces of the form <span class="math inline">(⋀<sub><em>i</em> &lt; <em>k</em> &lt; <em>j</em></sub>(<em>C</em>(<em>Σ</em><sup><em>n</em><sub><em>k</em></sub></sup>𝕊)) ∧ <em>Σ</em><sup><em>n</em><sub><em>j</em></sub></sup>𝕊</span> will play an important role in our construction. After swapping smash terms, we may indentify these spaces with <span class="math inline">(⋀<sub><em>i</em> &lt; <em>k</em> ≤ <em>j</em></sub><em>Σ</em><sup><em>n</em><sub><em>k</em></sub></sup>𝕊) ∧ <em>I</em><sup><em>j</em> − <em>i</em> − 1</sup></span>. Spaces of the form <span class="math inline"><em>Y</em> ∧ <em>I</em><sup><em>m</em></sup></span> recieve maps <span class="math inline">∂</span> from <span class="math inline"><em>Y</em> ∧ <em>Σ</em><sup>∞</sup><em>S</em><sup><em>m</em> − 1</sup> ≅ <em>Σ</em><sup><em>m</em> − 1</sup><em>Y</em></span> induced by the space-level boundary inclusion of a sphere into the disk <span class="math inline"><em>I</em><sup><em>n</em></sup></span>. Similarly to the above, we will say that a map <span class="math inline"><em>f</em> : <em>Y</em> ∧ <em>I</em><sup><em>m</em></sup> → <em>Z</em></span> <em>restricts</em> to a map <span class="math inline"><em>g</em> : <em>Σ</em><sup><em>m</em> − 1</sup><em>Y</em> → <em>Z</em></span> if <span class="math inline">∂<em>f</em> := <em>f</em> ∘ ∂ = <em>g</em></span>.</p>
+<p>Let <span class="math inline"><em>X</em></span> be an <span class="math inline"><em>E</em><sub>∞</sub></span>-ring spectrum. Suppose we are given homotopy classes <span class="math inline"><em>a</em><sub><em>i</em></sub> ∈ <em>π</em><sub><em>n</em><sub><em>i</em></sub></sub><em>X</em></span> for <span class="math inline">1 ≤ <em>i</em> ≤ <em>m</em></span>.</p>
+<div class="defn">
+<p><strong>Definition 2</strong> (Defining Systems).  A <em>defining system</em> for <span class="math inline"> &lt; <em>α</em><sub>1</sub>, ..., <em>α</em><sub><em>m</em></sub>&gt;</span> is given by maps <span class="math inline">{<em>A</em><sub><em>i</em> − 1, <em>i</em></sub> : <em>Σ</em><sup><em>n</em><sub><em>i</em></sub></sup>𝕊 → <em>X</em>}<sub>1 ≤ <em>i</em> ≤ <em>m</em></sub></span>. Such that <span class="math inline"><em>A</em><sub><em>i</em> − 1, <em>i</em></sub></span> represents <span class="math inline"><em>a</em><sub><em>i</em></sub></span> as well as maps: <span class="math display"><em>A</em><sub><em>i</em>, <em>j</em></sub> : (⋀<sub><em>k</em></sub><em>C</em>(<em>Σ</em><sup><em>n</em><sub><em>k</em></sub></sup>𝕊)) ∧ <em>Σ</em><sup><em>n</em><sub><em>j</em></sub></sup>𝕊 → <em>X</em></span> For <span class="math inline">1 ≤ <em>i</em> &lt; <em>j</em> ≤ <em>m</em></span>, <span class="math inline">(<em>i</em>,<em>j</em>) ≠ (0,<em>m</em>)</span> and <span class="math inline"><em>i</em> &lt; <em>k</em> &lt; <em>j</em></span>, satisfying the following condition (*). We will say that <span class="math inline"><em>A</em><sub><em>i</em>, <em>j</em></sub></span> has level <span class="math inline"><em>j</em> − <em>i</em></span>.</p>
+</div>
+<div class="defn">
+<p><strong>Definition 3</strong> (Coherence condition (*)).  Given <span class="math inline"><em>A</em><sub><em>i</em>, <em>j</em></sub></span> as above there are maps <span class="math inline"><em>A</em><sub><em>i</em>, <em>k</em>, <em>j</em></sub> := <em>μ</em><sub><em>X</em></sub>(<em>A</em><sub><em>i</em>, <em>k</em></sub>∧<em>A</em><sub><em>k</em>, <em>j</em></sub>)</span>. The domain of <span class="math inline"><em>A</em><sub><em>i</em>, <em>k</em>, <em>j</em></sub></span> is of the form: <span class="math display">(⋀<sub><em>i</em> &lt; ℓ &lt; <em>k</em></sub><em>C</em>(<em>Σ</em><sup><em>n</em><sub>ℓ</sub></sup>𝕊)) ∧ <em>Σ</em><sup><em>n</em><sub><em>k</em></sub></sup>𝕊 ∧ (⋀<sub><em>k</em> &lt; ℓ &lt; <em>j</em></sub><em>C</em>(<em>Σ</em><sup><em>n</em><sub>ℓ</sub></sup>𝕊)) ∧ <em>Σ</em><sup><em>n</em><sub><em>j</em></sub></sup>𝕊</span> Let <span class="math inline"><em>Y</em><sub><em>k</em></sub> ∧ <em>I</em><sup><em>j</em> − <em>i</em> − 1</sup></span> denote <span class="math inline">dom (<em>A</em><sub><em>i</em>, <em>k</em>, <em>j</em></sub>)</span> after swapping terms and denote by <span class="math inline"><em>ι</em><sub><em>k</em></sub></span> the obvious map <span class="math inline"><em>ι</em><sub><em>k</em></sub> : ⋀<sub><em>i</em> &lt; ℓ ≤ <em>j</em></sub><em>Σ</em><sup><em>n</em><sub>ℓ</sub></sup>𝕊 → <em>Y</em><sub><em>k</em></sub></span>. Then: <span class="math display">colim<sub><em>k</em></sub><em>ι</em><sub><em>k</em></sub> = <em>Σ</em><sup><em>j</em> − <em>i</em> − 2</sup>⋀<sub><em>i</em> &lt; ℓ ≤ <em>j</em></sub><em>Σ</em><sup><em>n</em><sub>ℓ</sub></sup>𝕊</span> Because the maps <span class="math inline"><em>A</em><sub><em>i</em>, <em>k</em>, <em>j</em></sub> ∘ <em>ι</em><sub><em>k</em></sub></span> agree, they induce a map <span class="math inline"><em>Ã</em><sub><em>i</em>, <em>j</em></sub> : colim<sub><em>k</em></sub><em>ι</em><sub><em>k</em></sub> → <em>X</em></span>. Then condition (*) is that <span class="math inline">∂<em>A</em><sub><em>i</em>, <em>j</em></sub> = <em>Ã</em><sub><em>i</em>, <em>j</em></sub></span>.</p>
+</div>
+<p>The condition (*) makes it clear that the construction of a level <span class="math inline"><em>n</em></span> element of the defining system depends heavily but also only on the choices of level <span class="math inline"><em>k</em> &lt; <em>n</em></span> elements. One can therefore think of building a defining system in stages, one for each level, in a pyramid fashion.</p>
+<div class="defn">
+<p><strong>Definition 4</strong> (Massey Product).  The Massey product <span class="math inline"> &lt; <em>a</em><sub>1</sub>, ..., <em>a</em><sub><em>m</em></sub>&gt;</span> is <em>defined</em> if there exists a defining system <span class="math inline"><em>A</em><sub><em>i</em>, <em>j</em></sub></span>. Note that while <span class="math inline"><em>A</em><sub>0, <em>m</em></sub></span> is not defined, we may still construct <span class="math inline"><em>Ã</em><sub>0, <em>m</em></sub></span>. We say that the homotopy class of <span class="math inline"><em>Ã</em><sub>0, <em>m</em></sub></span> is in <span class="math inline"> &lt; <em>a</em><sub>1</sub>, ..., <em>a</em><sub><em>m</em></sub>&gt;</span> and that the latter set is the collection of all such induced maps from defining systems.</p>
+</div>
+<p>Let <span class="math inline"><em>E</em>, <em>F</em></span> be <span class="math inline"><em>E</em><sub>∞</sub></span>-ring spectra in a symmetric monoidal model category for spectra. Then <span class="math inline"><em>E</em>, <em>F</em></span> are symmetric monoids in this category with products <span class="math inline"><em>μ</em><sub><em>E</em></sub>, <em>μ</em><sub><em>F</em></sub></span> respectively. If <span class="math inline"><em>a</em> : <em>Σ</em><sup><em>n</em><sub>1</sub></sup>𝕊 → <em>E</em> ∧ <em>F</em></span> and <span class="math inline"><em>b</em> : <em>Σ</em><sup><em>n</em><sub>2</sub></sup>𝕊 → <em>E</em> ∧ <em>F</em></span> are two homology classes in <span class="math inline"><em>E</em><sub>*</sub><em>F</em></span>, their product is defined by: <span class="math display">$$ab:\Sigma^{n_1+n_2}\mathbb{S}\xrightarrow{\cong}\Sigma^{n_1}\mathbb{S}\wedge\Sigma^{n_2}\mathbb{S}\xrightarrow{a\wedge b}E\wedge F\wedge E\wedge F \xrightarrow{\cong}E^2\wedge F^2\xrightarrow{\mu_E\wedge\mu_F}E\wedge F$$</span> Indeed, <span class="math inline"><em>E</em> ∧ <em>F</em></span> is again a commutative monoid by a general categorical argument and as a result, the above construction defines Massey products in <span class="math inline"><em>E</em><sub>*</sub><em>F</em></span>.</p>
+<div class="lem">
+<p><strong>Lemma 5</strong>.  <em>If <span class="math inline"> &lt; <em>a</em><sub>1</sub>, ..., <em>a</em><sub><em>m</em></sub>&gt;</span> is defined then any element of the Massey product can be obtained from a fixed choice of level <span class="math inline">1</span> representatives <span class="math inline"><em>A</em><sub><em>i</em> − 1, <em>i</em></sub></span> for the <span class="math inline"><em>a</em><sub><em>i</em></sub></span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Let <span class="math inline"><em>B</em><sub><em>i</em>, <em>j</em></sub></span> be complete defining system. We may by assumption choose homotopies <span class="math inline"><em>H</em><sub><em>i</em> − 1, <em>i</em></sub></span> from <span class="math inline"><em>B</em><sub><em>i</em> − 1, <em>i</em></sub></span> to <span class="math inline"><em>A</em><sub><em>i</em> − 1, <em>i</em></sub></span>. Suppose we have defined maps <span class="math inline"><em>A</em><sub><em>i</em>, <em>j</em></sub></span> up to level <span class="math inline"><em>n</em> &lt; <em>m</em> − 1</span> satisfying condition (*) and equipped with homotopies <span class="math inline"><em>H</em><sub><em>i</em>, <em>j</em></sub></span> from <span class="math inline"><em>B</em><sub><em>i</em>, <em>j</em></sub></span> to <span class="math inline"><em>A</em><sub><em>i</em>, <em>j</em></sub></span>. We inductively define <span class="math inline"><em>A</em><sub><em>i</em>′, <em>j</em>′</sub></span> for <span class="math inline"><em>j</em>′ − <em>i</em>′ = <em>n</em> + 1</span>. Note that we may already form the maps <span class="math inline"><em>A</em><sub><em>i</em>′, <em>k</em>, <em>j</em>′</sub></span> as they come from smashes of lower-level maps. Moreover, the smash homotopies of the <span class="math inline"><em>H</em><sub><em>i</em>, <em>j</em></sub></span> from lower levels (Definition <a href="#todo" data-reference-type="ref" data-reference="todo">[todo]</a>) yield <span class="math inline">$B_{i',k,j'}\xrightarrow{\simeq}A_{i',k,j'}$</span>. Therefore the colimit-induced maps <span class="math inline">$\tilde B_{i',j'}\xrightarrow{\simeq}\tilde A_{i',j'}$</span> are also homotopic. From Lemma <a href="#todo" data-reference-type="ref" data-reference="todo">[todo]</a> the map <span class="math inline"><em>B</em><sub><em>i</em>′, <em>j</em>′</sub></span> is equivalent to the data of a nullhomotopy for <span class="math inline"><em>B̃</em><sub>, <em>i</em>′, <em>j</em>′</sub></span>. Vertical composition of homotopies yields <span class="math inline"><em>A</em><sub><em>i</em>′, <em>j</em>′</sub></span> and clearly these two nullhomotopies are themselves homotopic.</p>
+<p>Once the system is complete, by the same smashing homotopy argument the maps <span class="math inline"><em>B̃</em><sub>0, <em>m</em></sub> ≃ <em>Ã</em><sub>0, <em>m</em></sub></span> are homotopic. ◻</p>
+</div>
+<div class="defn">
+<p><strong>Definition 6</strong>.  A defined Massey product <span class="math inline"> &lt; <em>a</em><sub>1</sub>, ..., <em>a</em><sub><em>m</em></sub>&gt;</span> is said to be strictly defined if for all <span class="math inline">1 ≤ <em>i</em> &lt; <em>j</em> ≤ <em>m</em></span>, <span class="math inline">(<em>i</em>,<em>j</em>) ≠ (1,<em>m</em>)</span> the products <span class="math inline"> &lt; <em>a</em><sub><em>i</em></sub>, ..., <em>a</em><sub><em>j</em></sub>&gt;</span> contain only <span class="math inline">0</span>.</p>
+</div>
+<div class="lem">
+<p><strong>Lemma 7</strong>.  <em>A Massey product <span class="math inline"> &lt; <em>a</em><sub>1</sub>, ..., <em>a</em><sub><em>m</em></sub>&gt;</span> is strictly defined if and only if every partial defining system completed to level <span class="math inline"><em>k</em> &lt; <em>m</em> − 1</span> can be completed to a full defining system.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> If the system <span class="math inline"><em>A</em><sub><em>i</em>, <em>j</em></sub></span> is completed up to level <span class="math inline"><em>k</em></span>, defining <span class="math inline"><em>A</em><sub><em>i</em>′, <em>j</em>′</sub></span> for <span class="math inline"><em>j</em>′ − <em>i</em>′ = <em>k</em> + 1</span> is equivalent to being able to choose a nullhomotopy for each <span class="math inline"><em>Ã</em><sub><em>i</em>, <em>j</em></sub></span>, <span class="math inline"><em>j</em> − <em>i</em> = <em>k</em></span>. This is possible if and only if every possible <span class="math inline"><em>Ã</em><sub><em>i</em>, <em>j</em></sub></span> is nullhomotopic. ◻</p>
+</div>
+<h1 class="unnumbered" id="pairing-systems-of-spectra">Pairing Systems of Spectra</h1>
+<p>In this section we define the input systems needed for our homotopical definition of Massey Products.</p>
+<div class="defn">
+<p><strong>Definition 8</strong>.  A pairing of spectrums <span class="math inline"><em>X</em></span> and <span class="math inline"><em>Y</em></span> is a map: <span class="math display"><em>X</em> ∧ <em>Y</em> → <em>Z</em></span></p>
+</div>
+</body>
+</html>
